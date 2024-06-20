@@ -15,4 +15,5 @@ dependencyResolutionManagement {
 
 rootProject.name = "PagingTAsk"
 include(":app")
- 
+include(":data")
+include(":domain")
