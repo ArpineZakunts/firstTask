@@ -33,7 +33,13 @@ android {
 }
 
 dependencies {
+    val version = "2.9.0"
+//    retrofit
     implementation(project(":domain"))
+    api("com.squareup.retrofit2:retrofit:$version")
+    implementation("com.squareup.retrofit2:converter-gson:$version")
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.0")
+    implementation("com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter:1.0.0")
 
     implementation("androidx.core:core-ktx:1.13.1")
     implementation("androidx.appcompat:appcompat:1.6.1")

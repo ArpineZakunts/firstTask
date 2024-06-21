@@ -15,10 +15,12 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-//        buildConfigField("String", "BASE_URL", "\"https://content.guardianapis.com/\"")
     }
 
     buildTypes {
+        debug {
+            buildConfigField("String", "BASE_URL", "\"https://content.guardianapis.com/\"")
+        }
         release {
             isMinifyEnabled = false
             proguardFiles(
@@ -38,6 +40,7 @@ android {
 
 dependencies {
     implementation(project(":domain"))
+    implementation(project(":data"))
 
     // koin for Kotlin apps
     implementation("io.insert-koin:koin-android:3.5.0")
